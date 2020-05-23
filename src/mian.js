@@ -2,7 +2,7 @@
  * @Author: Aero Xu
  * @Date: 2020-05-23 14:13:34
  * @LastEditors: Aero Xu
- * @LastEditTime: 2020-05-23 18:33:55
+ * @LastEditTime: 2020-05-23 18:34:56
  */
 
 const data = `
@@ -124,7 +124,7 @@ const step = () => {
         }
       }, 30)
     }
-  }, 0)
+  }, 10)
 }
 
 function type(n) {
