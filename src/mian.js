@@ -2,7 +2,7 @@
  * @Author: Aero Xu
  * @Date: 2020-05-23 14:13:34
  * @LastEditors: Aero Xu
- * @LastEditTime: 2020-05-23 17:27:25
+ * @LastEditTime: 2020-05-23 18:33:55
  */
 
 const data = `
@@ -117,10 +117,14 @@ const step = () => {
         if (rotate === 360) {
           rotate = 0
         }
-        canvas.style.transform = `rotate(${rotate}deg)`
+        if (document.body.clientWidth >= 500) {
+          canvas.style.transform = `rotate(${rotate}deg)`
+        } else {
+          canvas.style.transform = `translate(50%) rotate(${rotate}deg)`
+        }
       }, 30)
     }
-  }, 20)
+  }, 0)
 }
 
 function type(n) {
