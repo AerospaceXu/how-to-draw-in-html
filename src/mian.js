@@ -2,7 +2,7 @@
  * @Author: Aero Xu
  * @Date: 2020-05-23 14:13:34
  * @LastEditors: Aero Xu
- * @LastEditTime: 2020-05-23 16:42:24
+ * @LastEditTime: 2020-05-23 17:25:16
  */
 
 const data = `
@@ -100,6 +100,8 @@ let typeString = ''
 
 const app = document.querySelector('#app')
 const style = document.querySelector('#style')
+const canvas = document.querySelector('#canvas')
+let rotate = 0
 
 let n = 0
 
@@ -109,8 +111,16 @@ const step = () => {
     n++
     if (n < data.length - 1) {
       step()
+    } else {
+      setInterval(() => {
+        rotate += 1
+        if (rotate === 360) {
+          rotate = 0
+        }
+        canvas.style.transform = `rotate(${rotate}deg)`
+      }, 30)
     }
-  }, 36)
+  }, 0)
 }
 
 function type(n) {
