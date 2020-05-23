@@ -2,7 +2,7 @@
  * @Author: Aero Xu
  * @Date: 2020-05-23 14:13:34
  * @LastEditors: Aero Xu
- * @LastEditTime: 2020-05-23 17:25:16
+ * @LastEditTime: 2020-05-23 17:27:25
  */
 
 const data = `
@@ -120,7 +120,7 @@ const step = () => {
         canvas.style.transform = `rotate(${rotate}deg)`
       }, 30)
     }
-  }, 0)
+  }, 20)
 }
 
 function type(n) {
